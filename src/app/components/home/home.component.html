@@ -1,6 +1,6 @@
 <div fxLayout="row">
   <mat-list class="post" fxFlex="70" fxLayout="column">
-    <mat-card class="example-card" *ngFor="let item of studentList">
+    <mat-card class="example-card" *ngFor="let item of empUtilityService.studentList">
         <mat-card-header>
             <div mat-card-avatar class="example-header-image"></div>
             <mat-card-title>{{item.firstName}}</mat-card-title>

@@ -1,1 +1,22 @@
-<p>shout-out-template works!</p>
+<mat-list fxLayout="column" fxLayoutAlign="space-around center" *ngFor="let item of empUtilityService?.studentList| slice:1:4">
+    <mat-card class="card" *ngFor="let item of empUtilityService.studentList">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{item.firstName}}</mat-card-title>
+            <mat-card-subtitle>{{item?.lastName}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{item?.src}}" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <p>
+                The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                bred for hunting.
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button  mat-icon-button aria-label="Example icon button with a heart icon">
+              <a href="{{item?.src}}" download><mat-icon>save_alt</mat-icon></a> For downloading template click on icon
+            </button>
+        </mat-card-actions>
+    </mat-card>
+</mat-list>

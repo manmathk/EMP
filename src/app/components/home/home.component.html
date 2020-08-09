@@ -14,11 +14,19 @@
                 bred for hunting.
             </p>
         </mat-card-content>
-        <mat-card-actions>
-            <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
-                <mat-icon>favorite</mat-icon>
+        <mat-card-actions fxLayout = "row">
+            <button fxLayout="column" fxFlex="10" mat-icon-button>
+                <mat-icon>thumb_up</mat-icon><span class="text">3 likes</span>
             </button>
-            <button mat-button> <mat-icon>share</mat-icon></button>
+            <button fxLayout="column" fxFlex="10" mat-icon-button>
+              <mat-icon>thumb_down</mat-icon>5 dislikes
+            </button>
+            <button fxLayout="column" fxFlex="80" mat-icon-button>
+              <mat-icon>comment</mat-icon>32 commments
+            </button>
+            <button fxLayout="column" fxFlex="10" mat-icon-button>
+                <mat-icon>share</mat-icon>
+            </button>
         </mat-card-actions>
         <mat-form-field class="example-full-width">
             <mat-label class="comment-label">Leave a comment</mat-label>

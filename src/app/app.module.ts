@@ -10,6 +10,7 @@ import { MaterialModule } from './material.module';
 import { HomeComponent} from './components/home/home.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AnalyticsComponent } from './components/analytics/analytics.component';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { AnalyticsComponent } from './components/analytics/analytics.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatCarouselModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,9 +1,14 @@
 <mat-toolbar class="toolbar">
-  <mat-toolbar-row class="parent-menu-bar">
-    <span class="parent-menu-text"> EMPLOYEE MOTIVATION PORTAL </span>
-  </mat-toolbar-row>
   <mat-toolbar-row class="mat-toolbar-row">
     <div fxLayout="row" fxFlex="100" fxLayoutAlign="space-evenly center">
+      <nav>
+        <img class="fl-photo-img wp-image-23" src="http://emp.co.id/wp-content/uploads/2020/02/emp-logo.png"
+        alt="emp-logo" itemprop="image"
+        srcset="https://emp.co.id/wp-content/uploads/2020/02/emp-logo.png 500w,
+        https://emp.co.id/wp-content/uploads/2020/02/emp-logo-300x119.png 300w"
+        sizes="(max-width: 100px) 100vw, 100px" title="emp-logo">
+      </nav>
+      <span class="parent-menu-text"> EMPLOYEE MOTIVATION PORTAL </span>
       <nav>
         <a routerLink='notification'>
           <span class="material-icons">notification_important</span>
@@ -24,8 +29,22 @@
           <span class="material-icons">add</span>
         </a>
       </nav>
+      <div class="search">
+        <mat-form-field appearance="outline">
+          <mat-label>search here...</mat-label>
+          <input matInput placeholder="Placeholder">
+          <mat-icon matSuffix>person_search</mat-icon>
+        </mat-form-field>
+      </div>
+      <nav>
+        <a>
+          <span class="material-icons">
+            account_circle
+            </span>
+        </a>
+      </nav>
+
     </div>
-    <div class="toolbar-external-icons-container"></div>
   </mat-toolbar-row>
 </mat-toolbar>
 <router-outlet></router-outlet>

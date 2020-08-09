@@ -10,11 +10,17 @@
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
   }
 .mat-toolbar-row{
-  background-color:hotpink;
+  background-color:black;
 }
 .parent-menu-text{
-  color:rgb(3, 3, 148);
+  color:white;
   text-align: center;
   font-family: "Comic Sans MS", cursive, sans-serif	;
   ;
+}
+.material-icons{
+  color: white;
+}
+.search-label{
+  font-size: 16px;
 }

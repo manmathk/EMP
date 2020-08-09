@@ -1,3 +1,5 @@
+import { NotificationComponent } from './components/notification/notification.component';
+import { ShoutOutTemplateComponent } from './components/shoutOut-template/shout-out-template/shout-out-template.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,7 +14,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ShoutOutTemplateComponent,
+    NotificationComponent
   ],
   imports: [
   BrowserModule,

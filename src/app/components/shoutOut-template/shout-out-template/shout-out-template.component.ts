@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmpUtilityService } from 'src/app/services/emp-utility.service';
 
 @Component({
   selector: 'app-shout-out-template',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoutOutTemplateComponent implements OnInit {
 
-  constructor() { }
+  constructor(public empUtilityService: EmpUtilityService) { }
 
   ngOnInit(): void {
   }

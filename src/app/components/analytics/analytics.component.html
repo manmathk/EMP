@@ -1,0 +1,28 @@
+<mat-list class="post" fxLayout="column">
+  <mat-card class="example-card-right" *ngFor="let item of studentList">
+      <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{item.firstName}}</mat-card-title>
+          <mat-card-subtitle class="lastName">{{item?.lastName}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="{{item?.src}}" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+          <p>
+              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+              bred for hunting.
+          </p>
+      </mat-card-content>
+      <mat-card-actions>
+          <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+              <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-button> <mat-icon>share</mat-icon></button>
+      </mat-card-actions>
+      <mat-form-field class="example-full-width">
+          <mat-label class="comment-label">Leave a comment</mat-label>
+          <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+      </mat-form-field>
+  </mat-card>
+
+</mat-list>

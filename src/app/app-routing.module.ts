@@ -1,3 +1,4 @@
+import { AnalyticsComponent } from './components/analytics/analytics.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
@@ -10,12 +11,12 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path:'template',
-    component:ShoutOutTemplateComponent
+    path: 'template',
+    component: ShoutOutTemplateComponent
   },
   {
-    path:'notification',
-    component:NotificationComponent
+    path: 'notification',
+    component: NotificationComponent
   }
 ];
 

@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { HomeComponent} from './components/home/home.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AnalyticsComponent } from './components/analytics/analytics.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AppComponent,
     HomeComponent,
     ShoutOutTemplateComponent,
-    NotificationComponent
+    NotificationComponent,
+    AnalyticsComponent
   ],
   imports: [
   BrowserModule,

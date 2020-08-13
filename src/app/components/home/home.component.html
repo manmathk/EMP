@@ -1,40 +1,49 @@
 <div fxLayout="row">
   <mat-list class="post" fxFlex="70" fxLayout="column">
-    <mat-card class="example-card" *ngFor="let item of empUtilityService.studentList">
-        <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>{{item.firstName}}</mat-card-title>
-            <mat-card-subtitle class="lastName">{{item?.lastName}}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="{{item?.src}}" alt="Photo of a Shiba Inu">
-        <mat-card-content>
-            <p>
-                The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                bred for hunting.
-            </p>
-        </mat-card-content>
-        <mat-card-actions fxLayout = "row">
-            <button fxLayout="column" fxFlex="10" mat-icon-button>
-                <mat-icon>thumb_up</mat-icon><span class="text">3 likes</span>
-            </button>
-            <button fxLayout="column" fxFlex="10" mat-icon-button>
-              <mat-icon>thumb_down</mat-icon>5 dislikes
-            </button>
-            <button fxLayout="column" fxFlex="80" mat-icon-button>
-              <mat-icon>comment</mat-icon>32 commments
-            </button>
-            <button fxLayout="column" fxFlex="10" mat-icon-button>
-                <mat-icon>share</mat-icon>
-            </button>
-        </mat-card-actions>
+    <app-post *ngIf="empUtilityService.newPost"></app-post>
+    <mat-card class="example-card" *ngFor="let item of empUtilityService.postList">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title fxLayout="row">{{item.receiverFirstName }}{{item?.receiverLastName}}</mat-card-title>
+        <mat-card-title fxLayout="row">{{item.senderFirstName}}{{item?.senderLastName}}</mat-card-title>
+        <mat-card-subtitle class="lastName">{{item?.postDate}}</mat-card-subtitle>
+
+        <!-- <mat-card-subtitle class="lastName">{{item?.lastName}}</mat-card-subtitle> -->
+      </mat-card-header>
+      <img mat-card-image src="assets/images/woodland.jpeg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          {{item.postDescription}}
+        </p>
+
+      </mat-card-content>
+      <mat-card-actions fxLayout="row">
+        <button (click)="addLikes()" fxLayout="column" fxFlex="10" mat-icon-button>
+          <mat-icon>thumb_up</mat-icon><span class="text">{{numberOfLikes}} likes</span>
+        </button>
+        <button (click)="addDislikes()" fxLayout="column" fxFlex="10" mat-icon-button>
+          <mat-icon>thumb_down</mat-icon>{{numberOfDislikes}} dislikes
+        </button>
+        <button fxLayout="column" fxFlex="80" mat-icon-button>
+          <mat-icon>comment</mat-icon>{{item?.numberOfComment}} commments
+        </button>
+        <button fxLayout="column" fxFlex="10" mat-icon-button>
+          <mat-icon>share</mat-icon>
+        </button>
+      </mat-card-actions>
+      <form [formGroup]="formGroup">
         <mat-form-field class="example-full-width">
-            <mat-label class="comment-label">Leave a comment</mat-label>
-            <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+          <mat-label class="comment-label">Leave a comment</mat-label>
+          <textarea formControlName="commentFormControl" matInput placeholder="Ex. It makes me feel..."></textarea>
         </mat-form-field>
+        <button (click)="postComment(item)" fxLayout="column" fxFlex="80" color="primary" mat-icon-button>
+          <mat-icon>Post</mat-icon>
+        </button>
+      </form>
+      <div *ngFor="let eachComment of item?.commentList">
+        <span>{{eachComment.commentFormControl}}</span>
+      </div>
     </mat-card>
-
-</mat-list>
-<app-analytics></app-analytics>
+  </mat-list>
+  <app-analytics></app-analytics>
 </div>
-

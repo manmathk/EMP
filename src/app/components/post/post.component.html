@@ -1,0 +1,35 @@
+<form [formGroup]="postFormGroup" >
+<div fxLayout="row">
+  <div fxLayout="column" class="to">
+    <mat-label class="comment-label">To</mat-label>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label class="comment-label">First Name</mat-label>
+      <input formControlName="receiverFirstName" matInput placeholder="Ex. It makes me feel...">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label class="comment-label">Last Name</mat-label>
+      <input formControlName="receiverLastName" matInput placeholder="Ex. It makes me feel...">
+    </mat-form-field>
+  </div>
+
+  <div fxLayout="column" class="from">
+  <mat-label class="comment-label">From</mat-label>
+  <mat-form-field class="example-full-width" fxLayout="row" appearance="outline">
+    <mat-label class="comment-label">First name</mat-label>
+    <input formControlName="senderFirstName" matInput placeholder="Ex. It makes me feel...">
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label class="comment-label">Last name</mat-label>
+    <input formControlName="senderLastName" matInput placeholder="Ex. It makes me feel...">
+  </mat-form-field>
+  </div>
+  <button (click)="submitPost()" color="primary"fxFlex="80" mat-button>Post</button>
+</div>
+  <img mat-card-image src="assets/images/woodland.jpeg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <mat-form-field class="example-full-width">
+      <mat-label class="comment-label">Enter Message</mat-label>
+      <textarea formControlName="description" appearance="outline" matInput placeholder="Write some message..."></textarea>
+    </mat-form-field>
+  </mat-card-content>
+</form>

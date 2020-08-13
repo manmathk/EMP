@@ -1,3 +1,4 @@
+import { PostComponent } from './components/post/post.component';
 import { NotificationComponent } from './components/notification/notification.component';
 import { ShoutOutTemplateComponent } from './components/shoutOut-template/shout-out-template/shout-out-template.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,6 +12,7 @@ import { HomeComponent} from './components/home/home.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AnalyticsComponent } from './components/analytics/analytics.component';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,6 +21,7 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     HomeComponent,
     ShoutOutTemplateComponent,
     NotificationComponent,
+    PostComponent,
     AnalyticsComponent
   ],
   imports: [
@@ -28,6 +31,7 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     MaterialModule,
     FlexLayoutModule,
     MatCarouselModule.forRoot(),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

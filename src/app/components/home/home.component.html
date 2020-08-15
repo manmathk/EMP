@@ -18,18 +18,26 @@
 
       </mat-card-content>
       <mat-card-actions fxLayout="row">
-        <button (click)="addLikes()" fxLayout="column" fxFlex="10" mat-icon-button>
-          <mat-icon>thumb_up</mat-icon><span class="text">{{numberOfLikes}} likes</span>
+        <div fxLayout="column" fxFlex="10">
+          <button (click)="addLikes()" mat-icon-button>
+          <mat-icon>thumb_up</mat-icon><span class="text">{{item?.numberOfLikes}} likes</span>
         </button>
-        <button (click)="addDislikes()" fxLayout="column" fxFlex="10" mat-icon-button>
-          <mat-icon>thumb_down</mat-icon>{{numberOfDislikes}} dislikes
-        </button>
-        <button fxLayout="column" fxFlex="80" mat-icon-button>
+      </div>
+      <div fxFlex="10">
+         <button (click)="addDislikes()" mat-icon-button>
+          <mat-icon>thumb_down</mat-icon>
+        </button> {{item?.numberOfDislikes}} dislikes
+      </div>
+      <div fxLayout="column" fxFlex="80">
+        <button mat-icon-button>
           <mat-icon>comment</mat-icon>{{item?.numberOfComment}} commments
         </button>
-        <button fxLayout="column" fxFlex="10" mat-icon-button>
+      </div>
+      <div fxLayout="column" fxFlex="10" >
+        <button mat-icon-button>
           <mat-icon>share</mat-icon>
         </button>
+      </div>
       </mat-card-actions>
       <form [formGroup]="formGroup">
         <mat-form-field class="example-full-width">

@@ -1,6 +1,6 @@
 <form [formGroup]="postFormGroup" >
 <div fxLayout="row">
-  <div fxLayout="column" class="to">
+  <div fxLayout="column" class="to" fxFlex="30">
     <mat-label class="comment-label">To</mat-label>
     <mat-form-field class="example-full-width" appearance="outline">
       <mat-label class="comment-label">First Name</mat-label>
@@ -12,9 +12,9 @@
     </mat-form-field>
   </div>
 
-  <div fxLayout="column" class="from">
+  <div fxLayout="column" class="from" fxFlex="30">
   <mat-label class="comment-label">From</mat-label>
-  <mat-form-field class="example-full-width" fxLayout="row" appearance="outline">
+  <mat-form-field class="example-full-width" appearance="outline">
     <mat-label class="comment-label">First name</mat-label>
     <input formControlName="senderFirstName" matInput placeholder="Ex. It makes me feel...">
   </mat-form-field>
@@ -23,7 +23,7 @@
     <input formControlName="senderLastName" matInput placeholder="Ex. It makes me feel...">
   </mat-form-field>
   </div>
-  <button (click)="submitPost()" color="primary"fxFlex="80" mat-button>Post</button>
+  <div fxLayout="row" fxLayoutAlign="center center"  fxFlex="40"><button (click)="submitPost()" color="primary" mat-raised-button>Post</button></div>
 </div>
   <img mat-card-image src="assets/images/woodland.jpeg" alt="Photo of a Shiba Inu">
   <mat-card-content>

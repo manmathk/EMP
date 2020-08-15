@@ -70,4 +70,6 @@ export class Post {
  public src: 'assets/images/woodland.jpeg';
  public numberOfComment: number;
  public commentList = [];
+ public numberOfLikes: number;
+ public numberOfDislikes: number;
 }

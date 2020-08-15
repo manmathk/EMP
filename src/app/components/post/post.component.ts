@@ -28,7 +28,7 @@ export class PostComponent implements OnInit {
   }
   submitPost(){
     this.currentPost = this.postFormGroup.value;
-    let newPost = new Post();
+    const newPost = new Post();
     newPost.postId = 1;
     newPost.receiverFirstName = this.postFormGroup.value.receiverFirstName;
     newPost.receiverLastName = this.postFormGroup.value.receiverLastName;
@@ -38,7 +38,10 @@ export class PostComponent implements OnInit {
     newPost.postDate = new Date();
     newPost.commentList = [];
     newPost.numberOfComment = 0;
+    newPost.numberOfLikes = 100;
+    newPost.numberOfDislikes = 10;
     this.empUtilityService?.postList.push(newPost);
+    this.postFormGroup.reset();
     // this.empUtilityService?.postList.push(this.currentPost);
   }
 }
